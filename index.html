@@ -1,0 +1,228 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <title>Chipped Designs</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.terminal/1.1.0/js/jquery.terminal.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.terminal/1.1.0/css/jquery.terminal.min.css" rel="stylesheet"/>
+  <style>
+    .terminal {
+      --color: green;
+      --background: black;
+      --size: 1.5;
+    }
+    body {
+      background-color: #000000;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  jQuery(function ($, undefined) {
+    $('#term_demo').terminal(function (command) {
+        if (command == 'help' || command == 'ls') {
+          $('html, body').animate({scrollTop:$(document).height()+100}, 'slow');
+          this.echo("Available Commands:\n");
+          this.echo("- About Chipped Designs: abt")
+          this.echo("- Contact: con")
+          this.echo("- Work History: exp");
+          this.echo("- Skills Of Note: skl");
+          // this.echo("- Projects: prj");
+          this.echo("- Community and Volunteering: vol");
+          this.echo("- Resume/CV Download: res\n");
+          // this.echo("- Music : jc\n");  !add....
+          // this.echo("- Projects: prj\n"); !add....
+        }
+        else if (command == 'abt') {
+          $('html, body').animate({scrollTop:$(document).height()+100}, 'slow');
+          this.echo("Chipped Designs, LLC was started in 2017 by John L Coles.\n" +
+            "Chipped Designs began as a men's fashion accessories line \n" +
+            "designed primarily for musicians, focusing on bracelets utilizing\n" +
+            "expired computer parts and leather as source materials.\n" +
+            "It's evolved into the banner organization for gig and project work focused \n " +
+            "on technical, IT projects, programming and development efforts. \n")
+          this.echo("mailto:john.coles@chippeddesigns.com\n")
+        }
+        //  if (command == 'prj'){
+        else if (command == 'prj') {
+          this.echo("\n")
+          this.echo("pySparkSASpy - STDM AdAM data available as Spark RDDs, SAS Datasets/Views and Panda Dataframes from same source data files\n")
+          this.echo("aMirror SS (Google Sheets dev halted for refactoring to scalable architecture)\n")
+          this.echo("Audio Engineering\n")
+          this.echo("Original Songs Library & Musical Performance Production\n")
+          this.echo("\'The Console\' - Enter command \'console\' for description.\n")
+        }
+        else if (command == 'console') {
+          $('html, body').animate({scrollTop:$(document).height()+100}, 5000);
+          this.echo("--> The result of a home studio transformed over years into modest living room accessory <--\n")
+          this.echo("--> A digital and analog, complete performance and production instrument containing: \n")
+          this.echo("Yamaha electric piano, Korg MicroSynth2 Analog synth ,88-Key MIDI Synth, Apple Airbook, GarageBand, Ableton Live, Novation LaunchPad Pro," +
+          "Sennheiser e906 mic on Paul Reid Smith Archon25 combo guitar amplifier, FUHRMAN Linear AC Power Conditioner, Audio Technica System9 wireless mic system, " +
+          "Shure SM58 microphone.\n")
+          this.echo("Input for guitar/bass/etc: Polytune3 Tuner, Boss SYN-1 Synth w/ Expression pedal,")
+          this.echo("Tom Morello MXR Wah pedal, EH Mod11 Modulation w/ Expression pedal, MXR SmartGate pedal,")
+          this.echo("Hartke 8-Channel Mixer, Wireless Microphone w/headset mic,TC Helicon MicMechanix Vocal effect pedal, ")
+          this.echo("Roland DM-10 Electronic Drum Kit,8-Channel Hartke Mixer,iKaosillator instrument on iPad.\n")
+          this.echo("Outputs include 2 12\" Powered Hartke Monitors, VIZIO Soundbar w woofer and/or Headphones only. \n")
+          this.echo("Available instruments include: C R Alsip Custom Electric Guitar w Floyd Rose, Velvet Fender Telecaster electric guitar," +
+          "Takamene 12-string acoustic guitar, Ibanez 12-string acoustic guitar, Ibanez 6-string acoustic guitar, " +
+          "1980 Aria Pro II Les Paul Custom tribute model, Jackson Dinky 4-sting bass, SM-58 Microphone, Korg Vocoder, LaunchPad Prod controller \n")
+          this.echo("Drums occupy approx lounge chair space, console is smaller than an upright piano needing only 1 power source.")
+        }
+        //  if (command == 'con'){
+        else if (command == 'con') {
+          $('html, body').animate({scrollTop:$(document).height()+100}, 'slow');
+          this.echo("\n")
+          this.echo("mailto:john.coles@chippeddesigns.com\n")
+          this.echo("https://www.linkedin.com/in/johnlcoles\n")
+          this.echo("https://github.com/chippeddesigns\n")
+          this.echo("Personal mailto:johnlcoles@gmail.com\n")
+
+        }
+        //  if (command == 'skl'){
+        else if (command == 'skl') {
+          $('html, body').animate({scrollTop:$(document).height()+400}, 3000);
+          this.echo("School:")
+          this.echo("- B. Sci. Social Sciences - Emporia State University\n")
+          this.echo("Certifications:")
+          this.echo("- SAS Certified Professional Clinical Trials Programmer - SAS Institute, 2021")
+          this.echo("- SAS Certified Specialist Data Curation for SAS Data Scientists - SAS Institute, 2021")
+          this.echo("- SAS Certified Specialist Programming - SAS Institute, 2021")
+          this.echo("- Advanced Google Analytics - Google Analytics Academy, 2021")
+          this.echo("- Hootsuite Platform Certification - Hootsuite, 2018")
+          this.echo("- IT Project + - CompTIA, 2004\n")
+          this.echo("Programming and Development:")
+          this.echo("- Python: 2 years")
+          this.echo("- SQL: 20 years")
+          this.echo("- SAS: 8 years")
+          this.echo("- Javascript: 5 years")
+          this.echo("- JQuery: 2 years")
+          this.echo("- C#: 8 years")
+          this.echo("- VBA: 10 years")
+          this.echo("- Microsoft Office: 14 years")
+          this.echo("- GoogleSheets|Google App Script: 2 years")
+          this.echo("- HiveSQL: <year")
+          this.echo("- Hadoop|Hive|HDFS|HiveQL|Spark|SparkSQL|Skala: <year")
+          this.echo("- SASpy: <year")
+          this.echo("- pySpark: <year")
+          this.echo("- Pandas: 1 year")
+          this.echo("- PL/SQL: 16 years")
+          this.echo("- Spark Dataframes: <year")
+          this.echo("- WAMP Dev stack: <year")
+          this.echo("- PHP: <1 year")
+          this.echo("- MySQL: 1 year")
+          this.echo("- SparkSQL:  <year")
+          this.echo("- PigLatin:  <year")
+          this.echo("- SAS BASE, SAS/ACCESS, SAS MACROS, SAS/STAT: 6 years - Certified and Experienced")
+          this.echo("- SAS Data Integration Studio, Data Quality Server(QKB), Federation Server, Data Loader for Hadoop: 1 year - Certified and Experienced")
+          this.echo("- Oracle Clinical OC RDC, Medidata Rave (Custom Functions), Inform  : Production Domain Experience")
+          this.echo("- API Engineering and Consumption: REST JDBC Postman : Production Experience")
+          this.echo("- LEAP (iOS/iPad and WebInterface) custom software development for Sales Teams: 1 year")
+          this.echo("- Visual Studio, PyCharm, PHPStorm,  vi, Mainframe EDT..(even loaded tape to real..)")
+          this.echo("Domain and Regulatory:")
+          this.echo("- CDSIC:CDASH, SDTM, ADaM; Define.xml - Data Transformations and Analysis: 2 years")
+          this.echo("- HL7, CDAs, HIE (Health Information Exchanges) Integrations: 2 years")
+
+          // this.echo("- Speaker: 2010 Oracle Health Sciences World Conference\n")skl
+          // this.echo("- Recognized Industry Expert in Oncology Study Design at Symposium hosted by MIT \n")
+          // this.echo("- Maintain Detailed and Effective Project Utilization Billings\n")
+        }
+//   if (command == 'exp'){
+        else if (command == 'exp') {
+          $('html, body').animate({scrollTop:$(document).height()+100}, 3500);
+          this.echo("Professional Work History:")
+          this.echo("$Independent Consultant, Chipped Designs, LLC | Jan 2017 - Present")
+          this.echo("$Business Engineer/Sales Support, Tailored Remodeling | Jun 2020 - Apr2021")
+          this.echo("$Enumerator, US Census | Jun 2020 - Nov 2020")
+          this.echo("$Public Advocate, Wichita Community Foundation | Jul 2019 - Jan 2020")
+          this.echo("$Operations Engineer, Tallgrass Spa | Jun 2018 - Feb 2020")
+          this.echo("$Founder & Board Chair, Chisholm Trail Marathon 501c3 | Oct 2017 - Mar 2019")
+          this.echo("$.NET Developer, Cornerstone Data | Jun 2016 - Nov 2016")
+          this.echo("$Clinical Systems Designer(remote), PRA Health | Jun 2015 - Oct 2015")
+          this.echo("$Clinical Programmer III, Hologic | May 2014 - Jul 2014")
+          this.echo("$Senior Integration Engineer, eMDs | Apr 2013 - May 2014")
+          this.echo("$SAS STDM Programmer(remote) , Inventiv | Sep 2012-Mar 2013")
+          this.echo("$Biostatistics Programmer / Sr. Technical Operations Analyst, PPD | Nov 2006-Aug 2012")
+          this.echo("$Clinical Data Programmer, Quintiles | Sep 2005 - Nov 2006")
+          this.echo("$Software Developer, Jack Henry, Assoc. | Feb 2005-Sep 2005")
+          this.echo("$Senior Software Developer, Quintiles | Mar 2003-Feb 2005")
+          this.echo("$Clinical Data Programmer/Analyst, Quintiles | Jul 2000 - Mar 2003")
+          this.echo("$Programmer Analyst, Boeing | Jan 1997 - Jul 2000")
+//   if (command == 'grid'){
+        } else if (command == 'grid') {
+          this.echo("\n")
+          this.echo("Use this link to access an instance of aGrid, GoogleSheets project loosely termed A Therapist In A Spreadsheet https://docs.google.com/spreadsheets/d/1Pb3PTVP5OvFczKGDUbdSHrvuY3DQOr-VlAd1B7JcxYI/edit?usp=sharing")
+        }
+//   if (command == 'res'){
+        else if (command == 'res') {
+          this.echo("Static Version Coming Soon...Please review John's LinkedIn profile in the meantime @\nhttps://www.linkedin.com/in/johnlcoles")
+        }
+//   if (command == 'dld') {
+        else if (command == 'dld') {
+            // this.echo($('<a href= C:\\LinkedIn.docx />'))
+          // this.loadFile('list.txt','C:\\')
+        }
+
+//   if (command == 'vol'){
+        else if (command == 'vol') {
+          $('html, body').animate({scrollTop:$(document).height()+100}, 6000);
+          this.echo("Community and Volunteer Activity:")
+          this.echo("- Door to door community engagement via campaign support for local election candidate.")
+          this.echo("- Project Hope - Food delivery distribution for the underserved.")
+          this.echo("- The Outreach Program - Assemble non-perishable, packaged meals sent to designated disaster areas.")
+          this.echo("- Chisholm Trail Marathon - 501c3 Founder, Board Chair, Fundraiser and Event Volunteer ")
+          this.echo("- University of Texas, Health IT Program - Industry Mentor")
+        }
+      else {
+        if (command !== '') {
+          try {
+            var result = window.eval(command);
+            if (result !== undefined) {
+              this.echo(new String(result));
+            }
+          } catch (e) {
+            this.error(new String(e));
+          }
+        } else {
+          this.echo('nihilist?');
+        }
+      }
+        // $.fn.scrollbtm = function() {
+        //   $(window).scrollTop(($(window).height()+100));
+       // }
+      //$('#window').scrollbtm()
+
+      // function slwbtm() {
+      //     $(window).scrollTop($('#term_demo').position().top);
+      // }
+    },
+      {greetings: 'Welcome to the Peaky Terminal by Chipped Designs \xA92021. \n\nType \'help\' for command assistance.\n',
+      name: 'Chipped Prompt',
+      prompt: '>',
+      color: 'green',
+      });
+  });
+</script>
+<div id="term_demo">
+</div>
+<!-- Add your site or application content here -->
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script>
+  window.ga = function () {
+   ga.q.push(arguments)
+  };
+  ga.q = [];
+  ga.l = +new Date;
+  ga('create', 'UA-211563552-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'transport', 'beacon');
+  ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+</html>
